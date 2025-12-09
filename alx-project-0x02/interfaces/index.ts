@@ -1,31 +1,40 @@
+// Card Component Props
 export interface CardProps {
   title: string;
   content: string;
 }
-export interface ButtonProps {
-  size?: "small" | "medium" | "large";
-  shape?: "rounded-sm" | "rounded-md" | "rounded-full";
-  onClick?: () => void;
-  children: React.ReactNode;
-}
+
+// Post Component Props
 export interface PostProps {
-  userId: number;
-  id: number;
   title: string;
-  body: string;
-}
-export interface Address {
-  street: string;
-  suite: string;
-  city: string;
-  zipcode: string;
+  content: string;
+  userId: number;
 }
 
+// Post Data (for modal and state management)
+export interface PostData {
+  id?: number;
+  title: string;
+  content: string;
+}
+
+// Button Component Props
+export interface ButtonProps {
+  size?: 'small' | 'medium' | 'large';
+  shape?: 'rounded-sm' | 'rounded-md' | 'rounded-full';
+  children: React.ReactNode;
+  onClick?: () => void;
+}
+
+// User Component Props
 export interface UserProps {
   id: number;
   name: string;
-  username: string;
   email: string;
-  address: Address;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+  };
 }
-
