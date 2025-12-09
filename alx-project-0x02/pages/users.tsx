@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import UserCard from "../../components/common/UserCard";
-import { UserProps } from "..";
+import UserCard from "../components/common/UserCard";
+import { UserProps } from "../interfaces";
 
 const Users: React.FC = () => {
   const [users, setUsers] = useState<UserProps[]>([]);

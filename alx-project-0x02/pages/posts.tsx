@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import PostCard from "../../components/common/PostCard";
-import { PostProps } from "..";
+import PostCard from "../components/common/PostCard";
+import { PostProps } from "../interfaces";
 
 const Posts: React.FC = () => {
   const [posts, setPosts] = useState<PostProps[]>([]);
